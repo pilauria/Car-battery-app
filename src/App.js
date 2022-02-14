@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './App.css';
 import { Header } from './components/Header';
 import CarBattery from './containers/CarBattery';
+
 const counterDefaultVal = {
   speed: {
     title: 'Speed',

@@ -6,6 +6,7 @@ import { CarStats } from '../components/CarStats';
 import { getModelData } from '../services/BatteryService';
 import { CarCounter } from '../components/CarCounter';
 import CarClimate from '../components/CarClimate';
+import CarWheels from '../components/CarWheels';
 
 class CarBattery extends Component {
   state = {
@@ -16,16 +17,6 @@ class CarBattery extends Component {
       climate: true,
       wheels: 19,
     },
-  };
-
-  updateCounterState = (title, newValue) => {
-    const config = { ...this.state.config };
-    // update config state with new value
-    title === 'Speed'
-      ? (config['speed'] = newValue)
-      : (config['temperature'] = newValue);
-    // update our state
-    this.setState({ config });
   };
 
   increment = (e, title) => {
@@ -66,11 +57,21 @@ class CarBattery extends Component {
     }
   };
 
-  // handle aircon & heating click event handler
   handleChangeClimate = () => {
     const config = { ...this.state.config };
     config['climate'] = !this.state.config.climate;
-    this.setState({ config });
+    this.setState({ config }, () => {
+      this.statsUpdate();
+    });
+  };
+
+  // handle Wheels click event handler
+  handleChangeWheels = size => {
+    const config = { ...this.state.config };
+    config['wheels'] = size;
+    this.setState({ config }, () => {
+      this.statsUpdate();
+    });
   };
 
   calculateStats = (models, value) => {
@@ -98,6 +99,18 @@ class CarBattery extends Component {
     });
   };
 
+  updateCounterState = (title, newValue) => {
+    const config = { ...this.state.config };
+    // update config state with new value
+    title === 'Speed'
+      ? (config['speed'] = newValue)
+      : (config['temperature'] = newValue);
+    // update our state
+    this.setState({ config }, () => {
+      this.statsUpdate();
+    });
+  };
+
   componentDidMount() {
     this.statsUpdate();
   }
@@ -106,7 +119,8 @@ class CarBattery extends Component {
     const { config, carstats } = this.state;
     return (
       <form className='car-battery'>
-        <h1>Range Per Charge</h1>
+        <h3>Battery Run Time Calculator</h3>
+        <h4>- Range Per Charge - </h4>
         <Car wheelsize={config.wheels} />
         <CarStats carstats={carstats} />
         <div className='car-controls cf'>
@@ -124,11 +138,15 @@ class CarBattery extends Component {
               decrement={this.decrement}
             />
             <CarClimate
-              value={this.state.config.climate.climate}
+              value={this.state.config.climate}
               limit={this.state.config.temperature > 10}
               handleChangeClimate={this.handleChangeClimate}
             />
           </div>
+          <CarWheels
+            value={this.state.config.wheels}
+            handleChangeWheels={this.handleChangeWheels}
+          />
         </div>
         <CarNotice />
       </form>

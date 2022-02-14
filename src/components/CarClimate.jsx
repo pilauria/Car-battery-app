@@ -4,9 +4,9 @@ import '../App.css';
 const CarClimate = props => (
   <div className='car-climate'>
     <label
-      className={`'car-climate__item ${
+      className={`car-climate__item ${
         props.value ? 'car-climate__item--active' : ''
-      }  ${!props.limit ? 'car-heat' : ''}'`}
+      }  ${!props.limit ? 'car-heat' : ''}`}
     >
       <p>
         {props.limit ? 'ac' : 'heat'} {props.value ? 'on' : 'off'}

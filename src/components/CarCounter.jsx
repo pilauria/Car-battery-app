@@ -1,8 +1,6 @@
 import PropTypes from 'prop-types';
 import '../App.css';
 
-import React from 'react';
-
 export const CarCounter = props => {
   return (
     <div className='car-counter'>

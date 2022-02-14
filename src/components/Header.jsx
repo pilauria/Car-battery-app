@@ -1,5 +1,5 @@
 import '../App.css';
-import logoUrl from '../assets/logo.svg';
+import logoUrl from '../assets/SuperCar.png';
 
 export const Header = () => {
   return (
