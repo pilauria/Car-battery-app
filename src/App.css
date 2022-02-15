@@ -4,7 +4,7 @@
 .header {
   padding: 15px 0;
   text-align: center;
-  background: #222;
+  background: rgb(59, 59, 59);
 }
 .header img {
   width: 200px;
@@ -184,14 +184,19 @@
 .car-counter {
   float: left;
   width: 230px;
+  border: 1px solid gray;
+  border-radius: 12px;
+  padding: 5px;
 }
 .car-counter__title {
   letter-spacing: 2px;
   font-size: 16px;
+  text-align: center;
 }
 .car-counter__container {
   margin: 10px 0 0;
-  padding-right: 40px;
+  padding: 10px 30px;
+  border-radius: 8px;
 }
 .car-counter__container input[type='number'] {
   border: 0;
@@ -229,6 +234,7 @@
   background-position: 24.21053% 9px;
   background-repeat: no-repeat;
   background-size: 44px;
+  border-radius: 12px;
 }
 .car-counter__item:focus {
   background-color: #f2f2f2;
@@ -282,10 +288,9 @@
 .car-climate-container {
   float: left;
   width: 420px;
-  padding: 0 40px;
-  margin: 0 40px 0 0;
-  border-left: 1px solid #ccc;
-  border-right: 1px solid #ccc;
+  padding: 0 20px;
+  margin: 0 20px 0 20px;
+  /* car-stats-icon car-stats-icon */
 }
 .car-controls {
   display: block;
@@ -358,6 +363,11 @@
 .tesla-wheels__component {
   float: left;
   width: 355px;
+  text-align: center;
+  border: 1px solid gray;
+  border-radius: 12px;
+  padding: 5px;
+  padding: 10px 30px;
 }
 .tesla-wheels__title {
   letter-spacing: 2px;
@@ -378,6 +388,7 @@
   background-position: 24.21053% 9px;
   background-repeat: no-repeat;
   background-size: 44px;
+  border-radius: 8px;
 }
 .tesla-wheels__item--19 {
   background-image: url(./assets/wheels/19.svg);

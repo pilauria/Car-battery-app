@@ -12,6 +12,7 @@ export const CarStats = ({ carstats }) => {
   ));
   return (
     <div className='car-stats'>
+      <h1>Vehicle Models</h1>
       <ul>{listItems}</ul>
     </div>
   );
