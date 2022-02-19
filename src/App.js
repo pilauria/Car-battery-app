@@ -14,7 +14,7 @@ const counterDefaultVal = {
   temperature: {
     title: 'Outside Temperature',
     unit: '°',
-    step: 10,
+    step: 5,
     min: -10,
     max: 40,
   },
@@ -22,7 +22,7 @@ const counterDefaultVal = {
 class App extends Component {
   render() {
     return (
-      <div>
+      <div className='container'>
         <Header />
         <CarBattery counterDefaultVal={counterDefaultVal} />
       </div>

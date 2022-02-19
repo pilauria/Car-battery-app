@@ -125,14 +125,14 @@ class CarBattery extends Component {
         <CarStats carstats={carstats} />
         <div className='car-controls cf'>
           <CarCounter
-            currentValue={config.speed}
+            currentValue={this.state.config.speed}
             initValues={this.props.counterDefaultVal.speed}
             increment={this.increment}
             decrement={this.decrement}
           />
           <div className='car-climate-container cf'>
             <CarCounter
-              currentValue={config.temperature}
+              currentValue={this.state.config.temperature}
               initValues={this.props.counterDefaultVal.temperature}
               increment={this.increment}
               decrement={this.decrement}

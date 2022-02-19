@@ -5,12 +5,11 @@ import React from 'react';
 export const CarNotice = () => {
   return (
     <div className='car-barrery__notice'>
-      <p>
-        The actual amount of range that you experience will vary based on your
-        particular use conditions. See how particular use conditions may affect
-        your range in our simulation model.
+      <p className='notice'>
+        Use selectors (speed, temperature, A/C, and wheel size) to change
+        conditions that affect your mileage range in the simulation model.
       </p>
-      <p>
+      <p className='notice'>
         Vehicle range may vary depending on the vehicle configuration, battery
         age and condition, driving style and operating, environmental and
         climate conditions.

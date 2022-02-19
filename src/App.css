@@ -143,8 +143,12 @@
   display: block;
   padding: 0 18px 0 0;
   position: relative;
-  color: #008dff;
+  color: #be3918;
   text-align: right;
+}
+
+.car-stats h1 {
+  padding: 20px;
 }
 .car-stats ul li p:after {
   font-size: 14px;
@@ -157,6 +161,7 @@
 }
 .car-stats-icon {
   height: 20px;
+  padding: 5px;
   background-size: auto 13px;
   background-position: top right;
   background-repeat: no-repeat;
@@ -187,6 +192,7 @@
   border: 1px solid gray;
   border-radius: 12px;
   padding: 5px;
+  margin: 5px;
 }
 .car-counter__title {
   letter-spacing: 2px;
@@ -248,7 +254,7 @@
 .car-counter__controls button {
   outline: 0;
   width: 30px;
-  color: #008dff;
+  color: #be3918;
   cursor: pointer;
   display: block;
   padding: 11px 0;
@@ -293,8 +299,9 @@
   /* car-stats-icon car-stats-icon */
 }
 .car-controls {
-  display: block;
+  display: flex;
   width: 100%;
+  margin-top: 40px;
 }
 /*CLIMATE*/
 .car-climate {
@@ -400,8 +407,8 @@
   background-color: #f2f2f2;
 }
 .tesla-wheels__item--active {
-  border-color: #39f;
-  box-shadow: inset 0px 0px 0px 1px #39f;
+  border-color: #be3918;
+  box-shadow: inset 0px 0px 0px 1px #be3918;
 }
 .tesla-wheels__item p {
   font-family: 'RobotoNormal';
@@ -418,4 +425,13 @@
   padding: 0;
   position: absolute;
   width: 1px;
+}
+
+.notice {
+  background-image: url(./assets/right-arrow-svgrepo-com.svg);
+  background-position: -2% 9px;
+  background-repeat: no-repeat;
+  background-size: 44px;
+  border-radius: 8px;
+  padding: 20px;
 }

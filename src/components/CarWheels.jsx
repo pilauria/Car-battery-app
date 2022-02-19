@@ -35,6 +35,7 @@ const CarWheels = props => (
     </div>
   </div>
 );
+
 CarWheels.propTypes = {
   value: PropTypes.number,
   handleChangeWheels: PropTypes.func,
